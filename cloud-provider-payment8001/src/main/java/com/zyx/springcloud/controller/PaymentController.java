@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.zyx.springcloud.entities.CommonResult;
@@ -19,7 +20,7 @@ public class PaymentController {
 	@Autowired
 	private PaymentService service;
 
-	@GetMapping(value = "/payment/create")
+	@PostMapping(value = "/payment/create")
 	public CommonResult<Payment> create() {
 		Payment pay = service.create();
 		log.info("insert success");
