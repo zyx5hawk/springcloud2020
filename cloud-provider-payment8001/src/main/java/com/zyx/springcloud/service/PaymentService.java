@@ -20,7 +20,7 @@ public class PaymentService implements IPaymentService {
 		count++;
 		Payment pay = new Payment();
 		pay.setId(count);
-		pay.setSerial("8001");
+		pay.setSerial(port);
 		datas.add(pay);
 		return pay;
 	}

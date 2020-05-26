@@ -4,7 +4,7 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://www.eureka7001.com:7001/eureka/
+      defaultZone: http://localhost:7001/eureka/
     register-with-eureka: false
 #设置feign客户端超时时间
 ribbon:

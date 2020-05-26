@@ -3,9 +3,17 @@ server:
    
 spring:
   application:
-    name: cloud-comsumer-order
+    name: cloud-comsumer-openfeign
 
 eureka:
   client:
     service-url:
        defaultZone: http://localhost:7001/eureka/
+       
+#设置feign客户端超时时间
+ribbon:
+  ReadTimeout: 5000
+  ConnectTimeout: 5000
+logging:
+  level:
+    com.atguigu.springcloud.service.PaymentFeignService: debug
